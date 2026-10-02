@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>NeonGrid: Realtime Multiplayer Arena</title>
+    <meta name="description" content="Full-stack real-time multiplayer arena game with player authentication, interactive lobbies, server-authoritative physics, leaderboards, matches, and rewards." />
+    <meta property="og:title" content="NeonGrid: Realtime Multiplayer Arena" />
+    <meta property="og:description" content="Full-stack real-time multiplayer arena game with player authentication, interactive lobbies, server-authoritative physics, leaderboards, matches, and rewards." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#090d16" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NeonGrid" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <link rel="stylesheet" href="/src/index.css" />
+    <script>
+      // Suppress harmless Vite HMR WebSocket messages in AI Studio preview iframe
+      (function() {
+        const origError = console.error;
+        console.error = function(...args) {
+          if (
+            (args[0] === '[vite]' && typeof args[1] === 'string' && args[1].includes('WebSocket')) ||
+            (typeof args[0] === 'string' && args[0].includes('WebSocket error'))
+          ) {
+            return;
+          }
+          origError.apply(console, args);
+        };
+      })();
+    </script>
+  </head>
+  <body class="bg-[#090d16] text-slate-100 select-none overflow-x-hidden antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

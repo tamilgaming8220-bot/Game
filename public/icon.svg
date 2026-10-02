@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f6ff" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007a" />
+      <stop offset="100%" stop-color="#7928ca" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+  
+  <!-- Cyber Grid Lines -->
+  <path d="M64 128h384M64 256h384M64 384h384M128 64v384M256 64v384M384 64v384" stroke="#00f6ff" stroke-width="1.5" stroke-opacity="0.12" />
+  
+  <!-- Outer Hexagon ring -->
+  <polygon points="256,76 412,166 412,346 256,436 100,346 100,166" fill="none" stroke="url(#neonPink)" stroke-width="6" opacity="0.8" filter="url(#glow)"/>
+  
+  <!-- Neon Ship / Fighter Glyph -->
+  <polygon points="256,120 360,370 256,320 152,370" fill="url(#neonCyan)" filter="url(#glow)"/>
+  <polygon points="256,155 330,340 256,305 182,340" fill="#090d16" />
+  
+  <!-- Energy Core -->
+  <circle cx="256" cy="270" r="22" fill="#00f6ff" filter="url(#glow)"/>
+  <circle cx="256" cy="270" r="12" fill="#ffffff" />
+  
+  <!-- Pulse thrusters -->
+  <line x1="200" y1="365" x2="175" y2="415" stroke="#ff007a" stroke-width="5" stroke-linecap="round" filter="url(#glow)" />
+  <line x1="312" y1="365" x2="337" y2="415" stroke="#ff007a" stroke-width="5" stroke-linecap="round" filter="url(#glow)" />
+  <line x1="256" y1="330" x2="256" y2="425" stroke="#00f6ff" stroke-width="7" stroke-linecap="round" filter="url(#glow)" />
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "NeonGrid: Realtime Multiplayer Arena",
+  "description": "Full-stack real-time multiplayer arena game with player authentication, interactive lobbies, server-authoritative physics, leaderboards, matches, and rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
